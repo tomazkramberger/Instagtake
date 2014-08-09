@@ -6,6 +6,6 @@
     .posts
       = render :partial => "shared/instaposts", :locals => { :posts => @posts }
     .row.mt
-      .col-lg-12
+      .col-lg-12.link-posts
         %hr.load-more-posts-hr
         = instatake_refresh_link(action_name, @posts)

@@ -1,5 +1,5 @@
 $('.posts').append('#{escape_javascript(render partial: "shared/instaposts", :locals => { :posts => @posts })}');
 $('a.load-more-posts').remove();
 $('hr.load-more-posts-hr').remove();
-$('.posts').append('<hr class="load-more-posts-hr" />');
-$('.posts').append('#{instatake_refresh_link(action_name, @posts)}');
+$('.link-posts').append('<hr class="load-more-posts-hr" />');
+$('.link-posts').append('#{instatake_refresh_link(action_name, @posts)}');
