@@ -1,4 +1,4 @@
-$(window).scroll ->
+$(window).on "scroll mousewheel DOMMouseScroll touchmove", ->
   if ($(window).scrollTop() + $(window).height() == $(document).height())
     $('a.load-more-posts').on 'inview', (e, visible) ->
       return unless visible
