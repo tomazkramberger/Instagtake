@@ -1,4 +1,19 @@
 $(document).ready(function(){
+
+            var wSize = $(window).width();
+            if (wSize <= 768) {
+                $('#container').addClass('sidebar-close');
+                $('#sidebar > ul').hide();
+            }
+
+            if (wSize > 768) {
+                $('#container').removeClass('sidebar-close');
+                $('#sidebar > ul').show();
+            }
+        }
+        $(window).on('load', responsiveView);
+        $(window).on('resize', responsiveView);
+
 $('.fa-bars').click(function () {
         if ($('#sidebar > ul').is(":visible") === true) {
             $('#main-content').css({
