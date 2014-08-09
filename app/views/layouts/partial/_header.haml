@@ -1,0 +1,12 @@
+/* ============================================== HEADER =============================================
+
+%header.header.black-bg
+  .sidebar-toggle-box
+    %div.fa.fa-bars.tooltips{ "data-placement" => "right", "data-original-title"=>"Toggle navigation"}
+  = link_to "Instatake", root_path, {:class => "logo"}
+  .top-menu
+    %ul.nav.pull-right.top-menu
+      %li
+        = link_to "Logout", destroy_user_session_path, { :method => :delete, :class => "logout" }
+
+/* =================================================================================================== 

@@ -1,0 +1,5 @@
+$('.results').html("");
+- unless @hashtags.nil?
+  $('.results').append('#{escape_javascript(render partial: "instatake/partial/hashtags_results", :locals => { :results => @hashtags })}');
+- unless @users.nil? 
+  $('.results').append('#{escape_javascript(render partial: "shared/instausers", :locals => { :users => @users })}');

@@ -1,0 +1,9 @@
+#login-page
+  .container
+    = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class=> "form-login" }, :defaults => { :input_html => { :class => "form-control" } }) do |f|
+      %h2.form-login-heading Sign in now
+      = f.error_notification
+      .login-wrap
+        <hr>
+        .login-social-link.centered
+          = render "devise/shared/links"

@@ -1,0 +1,33 @@
+- if !(posts.nil?)
+  - posts.each_slice(3) do |chunk|
+    .row.mt
+      - chunk.each do |post|
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12.desc
+          %div{ :class => "content-panel"}
+            .white-header
+              %div
+                = link_to image_tag(post.user.profile_picture, { :class => "img-circle", :width => 35 }), instagram_profile_path(current_user.identity.uid), {:target => "_blank"}
+                = link_to "#{post.user.username}", instauser_path(post.user.id)
+              = link_to '<i class="fa fa-download"></i> Download'.html_safe, instagram_download_path(post.id), {:target => "_blank", :class => "btn btn-sm btn-clear-g"}
+            %div{:id => "spotify", :class => "profile-#{post.id}"}
+              .description
+                - unless post.caption.nil?
+                  - post.tags.each do |tag|
+                    - post.caption.text = post.caption.text.gsub("##{tag}", "#{link_to "##{tag}", instaposts_getbytag_path("#{tag}")}")
+                  %h4= (post.caption.text).html_safe
+            %p.followers
+              %i.fa.fa-heart
+              = "#{post.likes[:count]} LIKES"
+            :javascript
+              $('.profile-#{post.id}').css("background-image", "url(#{post.images.standard_resolution.url})");
+              $(document).ready(function(){
+                $(".profile-#{post.id}").hover(function(){
+                  $(this).find("div.description").slideDown("slow");
+                },function(){
+                  $(this).find("div.description").slideUp("slow");    
+                });
+              });
+  :javascript
+    console.log(#{posts.to_json});
+- else
+  %p= "There is no pics."

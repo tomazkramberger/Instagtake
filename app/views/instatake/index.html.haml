@@ -1,0 +1,9 @@
+= stylesheet_link_tag "jquery.capty.css"
+= javascript_include_tag "jquery.capty"
+
+%section#main-content
+  %section.wrapper.site-min-height
+    .posts
+      = render :partial => "shared/instaposts", :locals => { :posts => @posts }
+      %hr.load-more-posts-hr
+      = instatake_refresh_link(action_name, @posts)

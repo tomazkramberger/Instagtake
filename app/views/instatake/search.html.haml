@@ -1,0 +1,23 @@
+%section#main-content
+  %section.wrapper.site-min-height
+    .row.mt
+      .col-lg-12
+        .form-panel
+          %h4.mb
+            %i.fa.fa-angle-right
+            = "Search"
+          = simple_form_for( :search, :url => instasearch_path, :method => :get, :remote => true, :html => {:class => "form-horizontal", :id => "search-form"}) do |f|
+            = f.error_notification
+            .form-group
+              %label{:for => "query", :class => "sr-only"}
+                = "Search query ... *use # for hashtags"
+              .col-lg-10
+                = f.input :text, :required => true, :autofocus => true, :input_html => { :class => "form-control", :placeholder=>"Search query ... (use # for hashtags)"}, :wrapper => false, label: false
+              .col-lg-2
+                = f.button :submit, "Search", :class => "btn btn-theme search-button"
+    .results
+:javascript
+  $( "#search-form" ).submit(function( event ) {
+    $('.results').append('<h3 class="centered">Please wait, loading ...</h3>')
+    event.preventDefault();
+  });

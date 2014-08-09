@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Instatake"
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "theme/style.css", :media => "all"
+    = stylesheet_link_tag "theme/style-responsive.css", :media => "all"
+    = stylesheet_link_tag "captionjs"
+    = javascript_include_tag "application"
+  %body
+    %section#container
+      = render "layouts/partial/header"
+      = render "layouts/partial/sidebar"
+      = yield
+      

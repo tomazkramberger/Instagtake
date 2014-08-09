@@ -1,0 +1,5 @@
+%ul.list-group
+  - results.each do |hashtag|
+    %li.list-group-item
+      %span.badge= "#{hashtag.media_count}"
+      = link_to "##{hashtag.name}", instaposts_getbytag_path(:tag => hashtag.name), :target => "_blank"

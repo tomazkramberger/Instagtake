@@ -1,0 +1,25 @@
+/* ============================================== SIDEBAR ============================================
+
+%aside
+  #sidebar.nav-collapse
+    %ul.sidebar-menu#nav-accordion
+      %p.centered
+        = link_to image_tag(session[:profile_pic], { :class => "img-circle", :width => 60 }), instagram_profile_path(current_user.identity.uid), {:target => "_blank"}
+      %h5.centered
+        #{current_user.name}
+
+      %li.mt
+        = link_to "<i class='fa fa-home'></i> Home".html_safe, root_path
+      %li.mt
+        = link_to "<i class='fa fa-users'></i> Following".html_safe, following_path
+      %li.mt
+        = link_to "<i class='fa fa-users'></i> Followers".html_safe, followers_path
+      %li.mt
+        = link_to "<i class='fa fa-search'></i> Search".html_safe, instasearch_path
+
+
+        
+
+
+/* =================================================================================================== 
+
