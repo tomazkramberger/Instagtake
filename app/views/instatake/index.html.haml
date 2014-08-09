@@ -5,5 +5,7 @@
   %section.wrapper.site-min-height
     .posts
       = render :partial => "shared/instaposts", :locals => { :posts => @posts }
-      %hr.load-more-posts-hr
-      = instatake_refresh_link(action_name, @posts)
+    .row.mt
+      .col-lg-12
+        %hr.load-more-posts-hr
+        = instatake_refresh_link(action_name, @posts)

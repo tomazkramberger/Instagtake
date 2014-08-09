@@ -11,8 +11,6 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 config/initializers/secret_token.rb
-config/initilizers/devise.rb
-config/initilizers/instagram.rb
 
 ## Environment normalisation:
 /.bundle
