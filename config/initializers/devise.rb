@@ -250,5 +250,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 
-  config.omniauth :instagram, "8db2485ad3954da585d59829937b3a2e", "54b14c0c70844df0aea57ae978c55d4d"
+  config.omniauth :instagram, "8b783dca69c047a7884c4f01e01d855c", "f9926696a8ad478c907a373b2b0a39e0"
 end
