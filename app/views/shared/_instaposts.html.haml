@@ -1,6 +1,5 @@
 - if !(posts.nil?)
   - posts.each_slice(3) do |chunk|
-    .row.mt
       - chunk.each do |post|
         .col-lg-4.col-md-4.col-sm-4.col-xs-12.desc
           %div{ :class => "content-panel"}
