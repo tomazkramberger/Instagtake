@@ -9,6 +9,11 @@ Instagtake is an app which main goal is downloading photos from Instagram. You c
 
 If you want to try, please go to [Instagtake](http://instagtake.herokuapp.com) 
 
+* For those who doesn't have Instagram account and don't plan to create one, you can use test account:
+
+  username: instagtakeapp
+  password: | contact me -> tomazkramberger@gmail.com |
+
 Features
 ===============================
 
