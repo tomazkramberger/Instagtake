@@ -13,4 +13,5 @@ Rails.application.config.assets.precompile += %w( jquery.capty.css )
 Rails.application.config.assets.precompile += %w( jquery.capty.js )
 Rails.application.config.assets.precompile += %w( jquery.caption.min.js )
 Rails.application.config.assets.precompile += %w( captionjs.css )
+Rails.application.config.assets.precompile += %w( .svg .eot .woff .ttf )
 
