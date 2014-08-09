@@ -7,4 +7,17 @@ This master branch contains the source for the currently released Instagtake.
 
 Instagtake is an app which main goal is downloading photos from Instagram. You can login with your Instagram account only and then you will see the whole magic. 
 
-If you want to try, please go to [Instagtake](http://heroku.com) 
+If you want to try, please go to [Instagtake](http://instagtake.herokuapp.com) 
+
+Features
+===============================
+
+* Download photos from instagram
+
+* Search by users or hashtags
+
+* List followers and download their photos
+
+* List users you are following and their photos
+
+* More features will be added soon
