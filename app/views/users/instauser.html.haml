@@ -6,5 +6,7 @@
       = "#{@instauser.full_name} - #{@instauser.username}"
     .posts
       = render :partial => "shared/instaposts", :locals => { :posts => @posts }
-      %hr.load-more-posts-hr
-      = link_to 'Load More Posts', instauser_path(:id => params[:id], :postid => @posts.last.id), :class => 'load-more-posts btn btn-default btn-lg', :remote => true
+    .row.mt
+      .col-lg-12.link-posts
+        %hr.load-more-posts-hr
+          = link_to 'Load More Posts', instauser_path(:id => params[:id], :postid => @posts.last.id), :class => 'load-more-posts btn btn-default btn-lg', :remote => true

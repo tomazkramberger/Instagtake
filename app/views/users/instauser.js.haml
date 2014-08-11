@@ -1,5 +1,5 @@
 $('.posts').append('#{escape_javascript(render partial: "shared/instaposts", :locals => { :posts => @posts })}');
 $('a.load-more-posts').remove();
 $('hr.load-more-posts-hr').remove();
-$('.posts').append('<hr class="load-more-posts-hr" />');
-$('.posts').append('#{link_to "Load More Posts", instauser_path(:id => params[:id], :postid => @posts.last.id), :class => 'load-more-posts btn btn-default btn-lg', :remote => true}');
+$('.link-posts').append('<hr class="load-more-posts-hr" />');
+$('.link-posts').append('#{link_to "Load More Posts", instauser_path(:id => params[:id], :postid => @posts.last.id), :class => 'load-more-posts btn btn-default btn-lg', :remote => true}');
