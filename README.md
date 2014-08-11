@@ -14,6 +14,20 @@ If you want to try, please go to [Instagtake](http://instagtake.herokuapp.com)
   username: instagtakeapp
   password: | contact me -> tomazkramberger@gmail.com |
 
+If you want to clone from github app and try it, first you must do some things.
+
+    1.) Move file devise_template.rb to config/initializers/ and rename it to: devise.rb
+
+        Replace [CLIENT_ID] with client_id provided by Instagram
+        Replace [SECRET_ID] with secret_id provided by Instagram
+
+    2.) Move file instagram_template.rb to config/initializers/ and rename it to: instagram.rb
+
+        Replace [CLIENT_ID] with client_id provided by Instagram
+        Replace [ACCESS_TOKEN] with secret_id which you can get here:
+
+          https://instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=http://localhost&response_type=token
+          
 Features
 ===============================
 
