@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def instauser
     @instauser = Instagram.user(params[:id])
     @posts = userposts
-    logger.info "User: #{current_user.authinfo}"
+    
     respond_to do |format|
       format.html
       format.js
