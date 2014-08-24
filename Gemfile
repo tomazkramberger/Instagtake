@@ -48,7 +48,7 @@ gem 'will_paginate'
 #  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 #end
 
-ruby '2.1.2'
+ruby '2.1.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
