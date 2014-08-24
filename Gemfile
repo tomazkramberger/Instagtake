@@ -48,7 +48,16 @@ gem 'will_paginate'
 #  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 #end
 
-ruby '2.1.2'
+# Deploy with Capistrano
+group :development do
+	ruby '2.1.2'
+end
+
+# Deploy with Capistrano
+group :production do
+	ruby '2.1.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
