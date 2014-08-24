@@ -1,3 +1,5 @@
+[ ![Codeship Status for tomazkramberger/Instagtake](https://codeship.io/projects/2d7374e0-0db0-0132-bc90-6a1e79364744/status)](https://codeship.io/projects/32320)
+
 About Instagtake on Github
 ===============================
 
