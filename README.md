@@ -1,4 +1,4 @@
-About Instagtake on Github
+About Instagtake on Github [![Build Status](https://travis-ci.org/tomazkramberger/Instagtake.svg?branch=master)](https://travis-ci.org/tomazkramberger/Instagtake)
 ===============================
 
 This repository contains the current source code of Instagtake. If you're having issues with the latest Instagtake version, feel free to log them at the [issue tracker](https://github.com/tomazkramberger/Instagtake/issues). 
@@ -14,19 +14,18 @@ If you want to try, please go to [Instagtake](http://instagtake.herokuapp.com)
   username: instagtakeapp
   password: | contact me -> tomazkramberger@gmail.com |
 
-If you want to clone from github app and try it, first you must do some things.
+If you want to clone from github app and try it, before using it you must do some things.
 
-    1.) Move file devise_template.rb to config/initializers/ and rename it to: devise.rb
+    Add environments variables down below to your .bashrc || .zshrc
+      
+      export INSTAGRAM_ACCESS_TOKEN=[ACCESS_TOKEN]
+      export INSTAGRAM_CLIENT_ID=[CLIENT_ID]
+      export INSTAGRAM_CLIENT_SECRET=[SECRET_ID]
 
-        Replace [CLIENT_ID] with client_id provided by Instagram
-        Replace [SECRET_ID] with secret_id provided by Instagram
-
-    2.) Move file instagram_template.rb to config/initializers/ and rename it to: instagram.rb
-
-        Replace [CLIENT_ID] with client_id provided by Instagram
-        Replace [ACCESS_TOKEN] with secret_id which you can get here:
-
-          https://instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=http://localhost&response_type=token
+      *Replace [CLIENT_ID] with client_id provided by Instagram
+      *Replace [SECRET_ID]with secret_id provided by Instagram
+      *Replace [ACCESS_TOKEN] with secret_id which you can get here:
+        https://instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=http://localhost&response_type=token
           
 Features
 ===============================
